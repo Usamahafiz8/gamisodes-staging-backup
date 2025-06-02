@@ -1,0 +1,53 @@
+query nftsByWallet(
+  $address: String = ""
+  $cursor: String = ""
+  $maxResults: PositiveInt = 25
+  $walletId: ID = ""
+  $filter: NFTFilterInput = {}
+) {
+  nftsByWallet(
+    address: $address
+    cursor: $cursor
+    maxResults: $maxResults
+    walletId: $walletId
+    filter: $filter
+  ) {
+    items {
+      id
+      blockchainId
+      serialNumber
+      blockchainState
+      model {
+        id
+        title
+        description
+        rarity
+        attributes
+        quantity
+        quantityMinted
+        metadata
+        status
+        state
+        updatedAt
+        blockchainId
+        createdAt
+        content {
+          id
+          files {
+            contentType
+            id
+            url
+          }
+          poster {
+            url
+            state
+            contentType
+            id
+          }
+        }
+      }
+      status
+    }
+    cursor
+  }
+}

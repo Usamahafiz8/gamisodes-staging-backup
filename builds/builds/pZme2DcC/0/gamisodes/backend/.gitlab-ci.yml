@@ -1,0 +1,209 @@
+.env: &create_env
+  - true > .env
+.dev_env: &dev_env
+  - echo PORT=$PORT >> .env
+  - echo HOST=$HOST >> .env
+  - echo FRONT_HOST=$FRONT_HOST >> .env
+  - echo EMAIL=$EMAIL >> .env
+  - echo DB_PORT=$DB_PORT >> .env
+  - echo DB_HOST=$DB_HOST >> .env
+  - echo DB_NAME=$DB_NAME >> .env
+  - echo DB_USERNAME=$DB_USERNAME >> .env
+  - echo DB_PASSWORD=$DB_PASSWORD >> .env
+  - echo PUBLIC_API_PATH=$PUBLIC_API_PATH >> .env
+  - echo PUBLIC_API_KEY=$PUBLIC_API_KEY >> .env
+  - echo CLIENT_SECRET=$CLIENT_SECRET >> .env
+  - echo GOOGLE_CLIENT_ID=$GOOGLE_CLIENT_ID_STAGE >> .env
+  - echo GOOGLE_CLIENT_SECRET=$GOOGLE_CLIENT_SECRET_STAGE >> .env
+  - echo GOOGLE_REDIRECT_URL=$GOOGLE_REDIRECT_URL >> .env
+  - echo GOOGLE_SCOPES=$GOOGLE_SCOPES >> .env
+  - echo MAGICLINK_REDIRECT_URL=$MAGICLINK_REDIRECT_URL >> .env
+  - echo EMAIL_AUTHOR_PASS=$EMAIL_AUTHOR_PASS >> .env
+  - echo ACCESS_TOKEN_SECRET_KEY=$ACCESS_TOKEN_SECRET_KEY >> .env
+  - echo REFRESH_TOKEN_SECRET_KEY=$REFRESH_TOKEN_SECRET_KEY >> .env
+  - echo TIME_OF_ACCESS_KEY=$TIME_OF_ACCESS_KEY >> .env
+  - echo TIME_OF_REFRESH_KEY=$TIME_OF_REFRESH_KEY >> .env
+  - echo PUBLIC_CLIENT_ID=$PUBLIC_CLIENT_ID >> .env
+  - echo ADMIN_API_ACCESS_TOKEN=$ADMIN_API_ACCESS_TOKEN >> .env
+  - echo SHOPIFY_WEBHOOK=$SHOPIFY_WEBHOOK >> .env
+  - echo STORE_NAME=$STORE_NAME >> .env
+  - echo PUBLIC_KLAVIYO_URL=$PUBLIC_KLAVIYO_URL >> .env
+  - echo RECAPTCHA_TOKEN=$RECAPTCHA_TOKEN >> .env
+  - echo DEFAULT_NFT_PRICE=$DEFAULT_NFT_PRICE >> .env
+  - echo TIMEOUT_MILLISECONDS=$TIMEOUT_MILLISECONDS >> .env
+  - echo AWS_REGION=$AWS_REGION >> .env
+  - echo AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID >> .env
+  - echo AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY >> .env
+  - echo AWS_BUCKET_NAME=$AWS_BUCKET_NAME_DEV >> .env
+  - echo TRASH_WALLET=$TRASH_WALLET_DEV >> .env
+  - echo AUTH0_ISSUER_URL=$AUTH0_ISSUER_URL >> .env
+  - echo AUTH0_AUDIENCE=$AUTH0_AUDIENCE >> .env
+  - echo AUTH0_CLIENT_ID=$AUTH0_CLIENT_ID >> .env
+  - echo AUTH0_CLIENT_SECRET=$AUTH0_CLIENT_SECRET >> .env
+  - echo ADMIN_SECRET=$ADMIN_SECRET >> .env
+  - echo RARIBLE_HOST=$RARIBLE_HOST >> .env
+  - echo RARIBLE_API_KEY=$RARIBLE_API_KEY >> .env
+  - echo WRAPPERS_IDS=$WRAPPERS_IDS >> .env
+  - echo MAGIC_HOST=$MAGIC_HOST >> .env
+  - echo MAGIC_API_KEY=$MAGIC_API_KEY >> .env
+  - echo MAGIC_API_SECRET_KEY=$MAGIC_API_SECRET_KEY >> .env
+.stage_env: &stage_env
+  - echo PORT=$PORT_STAGE >> .env
+  - echo HOST=$HOST_STAGE >> .env
+  - echo FRONT_HOST=$FRONT_HOST_STAGE >> .env
+  - echo EMAIL=$EMAIL >> .env
+  - echo DB_PORT=$DB_PORT >> .env
+  - echo DB_HOST=$DB_HOST >> .env
+  - echo DB_NAME=$DB_NAME_STAGE >> .env
+  - echo DB_USERNAME=$DB_USERNAME >> .env
+  - echo DB_PASSWORD=$DB_PASSWORD >> .env
+  - echo PUBLIC_API_PATH=$PUBLIC_API_PATH_STAGE >> .env
+  - echo PUBLIC_API_KEY=$PUBLIC_API_KEY_STAGE >> .env
+  - echo CLIENT_SECRET=$CLIENT_SECRET_STAGE >> .env
+  - echo GOOGLE_CLIENT_ID=$GOOGLE_CLIENT_ID_STAGE >> .env
+  - echo GOOGLE_CLIENT_SECRET=$GOOGLE_CLIENT_SECRET_STAGE >> .env
+  - echo GOOGLE_REDIRECT_URL=$GOOGLE_REDIRECT_URL_STAGE >> .env
+  - echo GOOGLE_SCOPES=$GOOGLE_SCOPES >> .env
+  - echo MAGICLINK_REDIRECT_URL=$MAGICLINK_REDIRECT_URL_STAGE >> .env
+  - echo EMAIL_AUTHOR_PASS=$EMAIL_AUTHOR_PASS >> .env
+  - echo ACCESS_TOKEN_SECRET_KEY=$ACCESS_TOKEN_SECRET_KEY >> .env
+  - echo REFRESH_TOKEN_SECRET_KEY=$REFRESH_TOKEN_SECRET_KEY >> .env
+  - echo TIME_OF_ACCESS_KEY=$TIME_OF_ACCESS_KEY >> .env
+  - echo TIME_OF_REFRESH_KEY=$TIME_OF_REFRESH_KEY >> .env
+  - echo PUBLIC_CLIENT_ID=$PUBLIC_CLIENT_ID_STAGE >> .env
+  - echo ADMIN_API_ACCESS_TOKEN=$ADMIN_API_ACCESS_TOKEN >> .env
+  - echo SHOPIFY_WEBHOOK=$SHOPIFY_WEBHOOK_STAGE >> .env
+  - echo STORE_NAME=$STORE_NAME >> .env
+  - echo PUBLIC_KLAVIYO_URL=$PUBLIC_KLAVIYO_URL >> .env
+  - echo RECAPTCHA_TOKEN=$RECAPTCHA_TOKEN >> .env
+  - echo DEFAULT_NFT_PRICE=$DEFAULT_NFT_PRICE >> .env
+  - echo TIMEOUT_MILLISECONDS=$TIMEOUT_MILLISECONDS >> .env
+  - echo AWS_REGION=$AWS_REGION >> .env
+  - echo AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID >> .env
+  - echo AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY >> .env
+  - echo AWS_BUCKET_NAME=$AWS_BUCKET_NAME_STAGE >> .env
+  - echo TRASH_WALLET=$TRASH_WALLET_STAGE >> .env
+  - echo AUTH0_ISSUER_URL=$AUTH0_ISSUER_URL_STAGE >> .env
+  - echo AUTH0_AUDIENCE=$AUTH0_AUDIENCE_STAGE >> .env
+  - echo AUTH0_CLIENT_ID=$AUTH0_CLIENT_ID_STAGE >> .env
+  - echo AUTH0_CLIENT_SECRET=$AUTH0_CLIENT_SECRET_STAGE >> .env
+  - echo ADMIN_SECRET=$ADMIN_SECRET >> .env
+  - echo RARIBLE_HOST=$RARIBLE_HOST_STAGE >> .env
+  - echo RARIBLE_API_KEY=$RARIBLE_API_KEY_STAGE >> .env
+  - echo WRAPPERS_IDS=$WRAPPERS_IDS_STAGE >> .env
+  - echo MAGIC_HOST=$MAGIC_HOST >> .env
+  - echo MAGIC_API_KEY=$MAGIC_API_KEY_STAGE >> .env
+  - echo MAGIC_API_SECRET_KEY=$MAGIC_API_SECRET_KEY_STAGE >> .env
+.prod_env: &prod_env
+  - echo PORT=$PORT_PROD >> .env
+  - echo HOST=$HOST_PORT >> .env
+  - echo FRONT_HOST=$FRONT_HOST_PORT >> .env
+  - echo EMAIL=$EMAIL >> .env
+  - echo DB_PORT=$DB_PORT >> .env
+  - echo DB_HOST=$DB_HOST_PROD >> .env
+  - echo DB_NAME=$DB_NAME_PROD >> .env
+  - echo DB_USERNAME=$DB_USERNAME >> .env
+  - echo DB_PASSWORD=$DB_PASSWORD_PROD >> .env
+  - echo PUBLIC_API_PATH=$PUBLIC_API_PATH_STAGE >> .env
+  - echo PUBLIC_API_KEY=$PUBLIC_API_KEY_STAGE >> .env
+  - echo CLIENT_SECRET=$CLIENT_SECRET_STAGE >> .env
+  - echo GOOGLE_CLIENT_ID=$GOOGLE_CLIENT_ID_STAGE >> .env
+  - echo GOOGLE_CLIENT_SECRET=$GOOGLE_CLIENT_SECRET_STAGE >> .env
+  - echo GOOGLE_REDIRECT_URL=$GOOGLE_REDIRECT_URL_PROD >> .env
+  - echo GOOGLE_SCOPES=$GOOGLE_SCOPES >> .env
+  - echo MAGICLINK_REDIRECT_URL=$MAGICLINK_REDIRECT_URL_PROD >> .env
+  - echo EMAIL_AUTHOR_PASS=$EMAIL_AUTHOR_PASS >> .env
+  - echo ACCESS_TOKEN_SECRET_KEY=$ACCESS_TOKEN_SECRET_KEY >> .env
+  - echo REFRESH_TOKEN_SECRET_KEY=$REFRESH_TOKEN_SECRET_KEY >> .env
+  - echo TIME_OF_ACCESS_KEY=$TIME_OF_ACCESS_KEY >> .env
+  - echo TIME_OF_REFRESH_KEY=$TIME_OF_REFRESH_KEY >> .env
+  - echo SHOPIFY_WEBHOOK=$SHOPIFY_WEBHOOK_PROD >> .env
+  - echo STORE_NAME=$STORE_NAME >> .env
+  - echo PUBLIC_KLAVIYO_URL=$PUBLIC_KLAVIYO_URL >> .env
+  - echo RECAPTCHA_TOKEN=$RECAPTCHA_TOKEN >> .env
+  - echo DEFAULT_NFT_PRICE=$DEFAULT_NFT_PRICE >> .env
+  - echo TIMEOUT_MILLISECONDS=$TIMEOUT_MILLISECONDS >> .env
+  - echo PUBLIC_CLIENT_ID=$PUBLIC_CLIENT_ID_STAGE >> .env
+  - echo ADMIN_API_ACCESS_TOKEN=$ADMIN_API_ACCESS_TOKEN >> .env
+  - echo AWS_REGION=$AWS_REGION >> .env
+  - echo AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID >> .env
+  - echo AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY >> .env
+  - echo AWS_BUCKET_NAME=$AWS_BUCKET_NAME_PROD >> .env
+  - echo TRASH_WALLET=$TRASH_WALLET_STAGE >> .env
+  - echo AUTH0_ISSUER_URL=$AUTH0_ISSUER_URL_STAGE >> .env
+  - echo AUTH0_AUDIENCE=$AUTH0_AUDIENCE_STAGE >> .env
+  - echo AUTH0_CLIENT_ID=$AUTH0_CLIENT_ID_STAGE >> .env
+  - echo AUTH0_CLIENT_SECRET=$AUTH0_CLIENT_SECRET_STAGE >> .env
+  - echo ADMIN_SECRET=$ADMIN_SECRET >> .env
+  - echo RARIBLE_HOST=$RARIBLE_HOST_STAGE >> .env
+  - echo RARIBLE_API_KEY=$RARIBLE_API_KEY_STAGE >> .env
+  - echo WRAPPERS_IDS=$WRAPPERS_IDS_STAGE >> .env
+  - echo MAGIC_HOST=$MAGIC_HOST >> .env
+  - echo MAGIC_API_KEY=$MAGIC_API_KEY_STAGE >> .env
+  - echo MAGIC_API_SECRET_KEY=$MAGIC_API_SECRET_KEY_STAGE >> .env
+
+stages:
+  - build-dev
+  - build-stage
+  - build-prod
+
+deploy-develop:
+  stage: build-dev
+  tags:
+    - staging.gamisodes.com
+  only:
+    - dev
+  script:
+    - whoami
+    - cd $ROOT_DIR_DEV
+    - pwd
+    - git checkout --force dev
+    - git reset --hard HEAD
+    - git pull origin dev
+    - *create_env
+    - *dev_env
+    - docker image prune -f
+    - docker system prune -f
+    - docker-compose -f ./dev.docker-compose.yml --env-file .env up -d --build --force-recreate
+    - sleep 15
+    - docker logs gs_be_dev
+
+deploy-stage:
+  stage: build-stage
+  tags:
+    - staging.gamisodes.com
+  only:
+    - stage
+  script:
+    - cd $ROOT_DIR_STAGE
+    - pwd
+    - git checkout --force stage
+    - git reset --hard HEAD
+    - git pull origin stage
+    - *create_env
+    - *stage_env
+    - docker image prune -f
+    - docker system prune -f
+    - docker-compose -f ./stage.docker-compose.yml --env-file .env up -d --build --force-recreate
+    - sleep 15
+    - docker logs gs_be_stage
+
+deploy-prod:
+  stage: build-prod
+  tags:
+    - prod.gamisodes.com
+  only:
+    - main
+  script:
+    - cd $ROOT_DIR_PROD
+    - pwd
+    - git checkout --force main
+    - git reset --hard HEAD
+    - git pull origin main
+    - *create_env
+    - *prod_env
+    - docker image prune -f
+    - docker system prune -f
+    - docker-compose -f ./prod.docker-compose.yml --env-file .env up -d --build --force-recreate
+    - sleep 60
+    - docker logs gs_be_prod

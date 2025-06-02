@@ -1,0 +1,16 @@
+query model($id: ID!) {
+  nftModel(id: $id) {
+    attributes
+    quantity
+    quantityMinted
+    title
+    metadata
+    nfts {
+      id
+      serialNumber
+      modelId
+    }
+    status
+    state
+  }
+}

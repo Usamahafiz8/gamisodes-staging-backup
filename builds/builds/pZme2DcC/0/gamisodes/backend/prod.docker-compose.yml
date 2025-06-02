@@ -1,0 +1,7 @@
+version: '3.9'
+
+services:
+  prod_be:
+    extends:
+      file: docker/app/prod.docker-compose.yml
+      service: backend

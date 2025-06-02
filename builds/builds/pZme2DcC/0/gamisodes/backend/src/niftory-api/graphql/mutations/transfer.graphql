@@ -1,0 +1,12 @@
+mutation transferNFTToWallet(
+  $nftModelId: ID!
+  $address: String
+  $walletId: ID
+) {
+  transfer(nftModelId: $nftModelId, walletId: $walletId, address: $address) {
+    id
+    blockchainId
+    status
+    saleState
+  }
+}

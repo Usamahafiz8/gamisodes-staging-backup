@@ -1,0 +1,26 @@
+mutation CheckoutWithDapperWallet(
+  $nftModelId: ID!
+  $address: String!
+  $price: UnsignedFloat
+  $expiry: UnsignedInt
+) {
+  checkoutWithDapperWallet(
+    nftModelId: $nftModelId
+    address: $address
+    price: $price
+    expiry: $expiry
+  ) {
+    cadence
+    brand
+    expiry
+    nftId
+    nftDatabaseId
+    nftTypeRef
+    price
+    registryAddress
+    setId
+    templateId
+    signerAddress
+    signerKeyId
+  }
+}

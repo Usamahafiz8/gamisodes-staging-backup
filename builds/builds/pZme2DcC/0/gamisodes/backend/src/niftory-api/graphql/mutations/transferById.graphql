@@ -1,0 +1,13 @@
+mutation transferById(
+  $id: ID
+  $walletId: ID
+  $address: String
+  $force: Boolean
+) {
+  transfer(id: $id, walletId: $walletId, address: $address, force: $force) {
+    id
+    serialNumber
+    status
+    saleState
+  }
+}

@@ -1,0 +1,15 @@
+mutation CompleteCheckoutWithDapperWallet(
+  $transactionId: String!
+  $nftDatabaseId: String
+) {
+  completeCheckoutWithDapperWallet(
+    transactionId: $transactionId
+    nftDatabaseId: $nftDatabaseId
+  ) {
+    id
+    blockchainId
+    serialNumber
+    saleState
+    blockchainState
+  }
+}

@@ -1,0 +1,7 @@
+version: '3.9'
+
+services:
+  dev_be:
+    extends:
+      file: docker/app/dev.docker-compose.yml
+      service: backend

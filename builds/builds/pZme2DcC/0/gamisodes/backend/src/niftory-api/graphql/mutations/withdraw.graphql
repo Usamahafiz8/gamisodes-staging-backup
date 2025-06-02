@@ -1,0 +1,19 @@
+mutation withdraw(
+  $id: ID!
+  $niftoryWalletAddress: String!
+  $receiverAddress: String!
+) {
+  withdraw(
+    id: $id
+    receiverAddress: $receiverAddress
+    niftoryWalletAddress: $niftoryWalletAddress
+  ) {
+    id
+    blockchainId
+    serialNumber
+    modelId
+    transactions {
+      id
+    }
+  }
+}

@@ -1,0 +1,7 @@
+query walletById($id: ID = "") {
+  walletById(id: $id) {
+    address
+    id
+    state
+  }
+}

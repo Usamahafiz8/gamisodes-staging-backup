@@ -1,0 +1,11 @@
+query getNfts($ids: [ID]) {
+  nfts(filter: { ids: $ids }, maxResults: 100) {
+    items {
+      serialNumber
+      modelId
+      id
+      saleState
+      status
+    }
+  }
+}

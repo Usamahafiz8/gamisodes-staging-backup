@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  backend:
+    container_name: gs_be_stage
+    restart: always
+    build:
+      context: ../../
+      dockerfile: docker/app/Dockerfile
+    ports:
+      - '${PORT_STAGE}:${PORT_STAGE}'
+    networks:
+      - default

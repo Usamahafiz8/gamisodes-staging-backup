@@ -1,0 +1,14 @@
+mutation transferBetweenWallets(
+  $id: ID!
+  $niftoryWalletAddress: String!
+  $receiverAddress: String!
+) {
+  withdraw(
+    receiverAddress: $receiverAddress
+    niftoryWalletAddress: $niftoryWalletAddress
+    id: $id
+  ) {
+    id
+    status
+  }
+}

@@ -1,0 +1,15 @@
+mutation updateNFTModel(
+  $attributes: JSONObject
+  $metadata: JSONObject
+  $id: ID!
+) {
+  updateNFTModel(
+    data: { metadata: $metadata, attributes: $attributes }
+    id: $id
+  ) {
+    attributes
+    id
+    title
+    metadata
+  }
+}

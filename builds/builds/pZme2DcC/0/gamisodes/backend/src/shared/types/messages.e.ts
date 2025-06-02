@@ -1,0 +1,4 @@
+export enum MessagesEnum {
+  CHECK_YOUR_EMAIL = 'CHECK_YOUR_EMAIL',
+  SUCCESSFUL = 'SUCCESSFUL',
+}

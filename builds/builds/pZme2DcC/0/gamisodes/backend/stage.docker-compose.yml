@@ -1,0 +1,7 @@
+version: '3.9'
+
+services:
+  stage_be:
+    extends:
+      file: docker/app/stage.docker-compose.yml
+      service: backend
