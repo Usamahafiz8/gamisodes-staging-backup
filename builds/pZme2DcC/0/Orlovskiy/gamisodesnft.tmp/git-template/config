@@ -1,0 +1,6 @@
+[init]
+	defaultBranch = none
+[fetch]
+	recurseSubmodules = false
+[http "https://gitlab.urich.work"]
+	sslCAInfo = /home/ubuntu/builds/pZme2DcC/0/Orlovskiy/gamisodesnft.tmp/CI_SERVER_TLS_CA_FILE
